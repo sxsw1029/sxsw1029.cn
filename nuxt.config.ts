@@ -1,5 +1,33 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: true }
-})
+  modules: ["@nuxt/eslint", "@nuxt/content", "@nuxtjs/color-mode", "@unocss/nuxt"],
+  devtools: { enabled: true },
+
+  css: ["@unocss/reset/tailwind.css", "~/assets/styles/main.css"],
+
+  compatibilityDate: "2024-11-01",
+
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
+
+  postcss: {
+    plugins: {
+      "postcss-preset-env": {},
+    },
+  },
+
+  eslint: {
+    config: {
+      standalone: false,
+    },
+  },
+
+  unocss: {
+    nuxtLayers: true,
+  },
+
+  colorMode: {
+    classSuffix: "",
+  },
+});
