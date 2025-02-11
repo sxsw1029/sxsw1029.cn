@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN npm config set registry https://registry.npmmirror.com
+# RUN npm config set registry https://registry.npmmirror.com
 RUN npm install && \
 	npm run build && \
 	npm cache clean --force
