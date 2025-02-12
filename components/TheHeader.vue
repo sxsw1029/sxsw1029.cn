@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { data } = useSettings();
+const siteSetting = useSiteSettings();
 
 const colorMode = useColorMode();
 
@@ -17,15 +17,17 @@ function switchColorMode() {
     <div
       class="rounded-full from-cyan-500 via-sky-500 to-blue-500 bg-gradient-to-r px-4 py-2 text-white font-light shadow-md"
     >
-      {{ data?.siteTitle }}
+      {{ siteSetting?.title }}
     </div>
 
     <nav class="flex">
       <NuxtLink
-        to="/"
+        v-for="nav in siteSetting?.navs"
+        :key="nav.name"
+        :to="nav.link"
         class="mx-2 opacity-60 transition duration-200 hover:opacity-100"
       >
-        Home
+        {{ nav.name }}
       </NuxtLink>
 
       <button

@@ -1,40 +1,47 @@
 <script lang="ts" setup>
-const { data } = useSettings();
+const siteSetting = useSiteSettings();
 </script>
 
 <template>
   <footer
     class="flex flex-col items-center justify-center py-10 text-center text-sm"
   >
-    <div class="my-px">
-      <a
-        href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="underline opacity-60 hover:opacity-100"
-      >CC BY-NC-SA 4.0</a>
-      <span class="mx-1.5 opacity-60">|</span>
-      <span class="opacity-60">&copy; {{ new Date().getFullYear() }} · {{ data?.siteTitle }}</span>
+    <div class="my-px flex">
+      <div v-if="siteSetting?.license && !siteSetting?.footer?.hideLicense">
+        <span v-if="typeof siteSetting.license === 'string'">{{ siteSetting.license }}</span>
+
+        <a
+          v-else
+          :href="siteSetting.license.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline opacity-60 hover:opacity-100"
+        >{{ siteSetting.license.name }}</a>
+
+        <span class="mx-1.5 opacity-60">|</span>
+      </div>
+
+      <span class="opacity-60">&copy; {{ new Date().getFullYear() }} · {{ siteSetting?.title }}</span>
     </div>
 
-    <div v-if="data?.icp_beian" class="my-px">
+    <div v-if="siteSetting?.icpBeian" class="my-px">
       <a
-        :href="data?.icp_link"
+        :href="siteSetting.icpBeian.url"
         target="_blank"
         rel="noopener noreferrer"
         class="opacity-60 hover:opacity-100"
-      >{{ data?.icp_code }}</a>
+      >{{ siteSetting.icpBeian.text }}</a>
     </div>
 
-    <div v-if="data?.gongAn_beian" class="my-px">
+    <div v-if="siteSetting?.gongAnBeian" class="my-px">
       <a
-        :href="data?.gongAn_link"
+        :href="siteSetting.gongAnBeian.url"
         target="_blank"
         rel="noopener noreferrer"
         class="flex opacity-60 hover:opacity-100"
       >
         <img src="/beian.png" class="mr-0.5">
-        <span>{{ data?.gongAn_code }}</span>
+        <span>{{ siteSetting.gongAnBeian.text }}</span>
       </a>
     </div>
 
