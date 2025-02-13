@@ -9,6 +9,8 @@ export default defineAppConfig({
       },
     ],
 
+    homePageTitle: "",
+
     license: {
       name: "CC BY-NC-SA 4.0",
       link: "https://creativecommons.org/licenses/by-nc-sa/4.0/",

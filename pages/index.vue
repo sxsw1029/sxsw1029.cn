@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-const { userConfig } = useAppConfig();
+const { siteConfig, userConfig } = useAppConfig();
+
+useHead({
+  title: siteConfig.homePageTitle ?? "Home",
+});
 </script>
 
 <template>
