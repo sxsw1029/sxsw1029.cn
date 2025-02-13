@@ -1,12 +1,10 @@
-import type { Config } from "./types";
-
-const settings: Config = {
+export default defineAppConfig({
   siteConfig: {
     title: "Sxsw的技术宅学习日志",
 
     navs: [
       {
-        name: "首页",
+        name: "主页",
         link: "/",
       },
     ],
@@ -57,6 +55,4 @@ const settings: Config = {
       },
     ],
   },
-};
-
-export default settings;
+});

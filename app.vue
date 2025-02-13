@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 // import { colors } from "unocss/preset-mini";
 
-const siteSetting = useSiteSettings();
+const { siteConfig } = useAppConfig();
 
 useHead({
   titleTemplate: (title) => {
     return title
-      ? `${title} - ${siteSetting?.title}`
-      : `${siteSetting?.title}`;
+      ? `${title} - ${siteConfig?.title}`
+      : `${siteConfig?.title}`;
   },
 });
 </script>
