@@ -3,7 +3,6 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
-  presetTypography,
   presetUno,
   presetWebFonts,
   transformerDirectives,
@@ -28,7 +27,6 @@ export default defineConfig({
         "vertical-align": "middle",
       },
     }),
-    presetTypography(),
     presetWebFonts({
       provider: "bunny",
       fonts: {

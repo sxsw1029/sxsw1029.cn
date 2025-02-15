@@ -17,10 +17,6 @@ useHead({
     <div
       class="relative mt-12 max-w-[32rem] flex flex-col items-center overflow-hidden rounded-[12px] bg-gray-50 text-center shadow-sm dark:bg-gray-800 dark:shadow-white/10"
     >
-      <!-- <div
-        class="w-0 h-0 -top-8 inset-x-0 m-auto border-16 border-solid border-transparent border-b-gray-50 absoulte"
-      ></div> -->
-
       <p class="p-8">
         {{ userConfig.description }}
       </p>
