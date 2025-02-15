@@ -9,13 +9,13 @@ useHead({
 <template>
   <main class="w-full flex flex-col items-center justify-center px-4">
     <div
-      class="mx-auto h-32 w-32 overflow-hidden border-2 border-white rounded-full border-solid text-center shadow-lg transition duration-500 dark:shadow-white/10 hover:shadow-2xl"
+      class="mx-auto h-32 w-32 overflow-hidden border-2 border-white rounded-full border-solid text-center shadow-md transition duration-500 dark:shadow-white/10 hover:shadow-2xl"
     >
       <img :src="userConfig.avatar" alt="Avatar">
     </div>
 
     <div
-      class="relative mt-12 max-w-[32rem] flex flex-col items-center overflow-hidden rounded-[12px] bg-gray-50 text-center shadow-sm dark:bg-gray-800 dark:shadow-white/10"
+      class="relative mt-12 max-w-xl flex flex-col items-center overflow-hidden rounded-xl bg-gray-50 text-center shadow-sm dark:bg-gray-800 dark:shadow-white/10"
     >
       <p class="p-8">
         {{ userConfig.description }}
