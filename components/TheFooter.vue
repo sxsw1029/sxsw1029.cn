@@ -7,7 +7,7 @@ const { siteConfig } = useAppConfig();
     class="flex flex-col items-center justify-center py-10 text-center text-sm"
   >
     <div class="my-px flex">
-      <div v-if="siteConfig?.license && !siteConfig?.footer?.hideLicense">
+      <div v-if="siteConfig.license && !siteConfig.footer?.hideLicense">
         <span v-if="typeof siteConfig.license === 'string'">{{ siteConfig.license }}</span>
 
         <a
@@ -21,10 +21,10 @@ const { siteConfig } = useAppConfig();
         <span class="mx-1.5 opacity-60">|</span>
       </div>
 
-      <span class="opacity-60">&copy; {{ new Date().getFullYear() }} · {{ siteConfig?.title }}</span>
+      <span class="opacity-60">&copy; {{ new Date().getFullYear() }} · {{ siteConfig.title }}</span>
     </div>
 
-    <div v-if="siteConfig?.icpBeian" class="my-px">
+    <div v-if="siteConfig.icpBeian" class="my-px">
       <a
         :href="siteConfig.icpBeian.url"
         target="_blank"
@@ -33,7 +33,7 @@ const { siteConfig } = useAppConfig();
       >{{ siteConfig.icpBeian.text }}</a>
     </div>
 
-    <div v-if="siteConfig?.gongAnBeian" class="my-px">
+    <div v-if="siteConfig.gongAnBeian" class="my-px">
       <a
         :href="siteConfig.gongAnBeian.url"
         target="_blank"

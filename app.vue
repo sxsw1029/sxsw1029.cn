@@ -6,8 +6,8 @@ const { siteConfig } = useAppConfig();
 useHead({
   titleTemplate: (title) => {
     return title
-      ? `${title} - ${siteConfig?.title}`
-      : `${siteConfig?.title}`;
+      ? `${title} - ${siteConfig.title}`
+      : `${siteConfig.title}`;
   },
 });
 </script>
