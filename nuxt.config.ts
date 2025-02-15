@@ -11,6 +11,19 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
 
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: "github-light",
+            dark: "github-dark",
+          },
+        },
+      },
+    },
+  },
+
   postcss: {
     plugins: {
       "postcss-preset-env": {},

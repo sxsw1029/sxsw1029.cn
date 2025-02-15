@@ -4,12 +4,18 @@ export default defineAppConfig({
 
     navs: [
       {
-        name: "主页",
+        name: "Home",
         link: "/",
+      },
+      {
+        name: "Posts",
+        link: "/posts",
       },
     ],
 
     homePageTitle: "",
+
+    postsPageTitle: "All Posts",
 
     license: {
       name: "CC BY-NC-SA 4.0",
