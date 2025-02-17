@@ -13,7 +13,7 @@ function switchColorMode() {
 </script>
 
 <template>
-  <header class="flex items-center justify-between p-4 py-6 lg:px-12">
+  <header class="flex items-center justify-between px-4 py-6 lg:px-12">
     <div
       class="rounded-full from-cyan-500 via-sky-500 to-blue-500 bg-gradient-to-r px-4 py-2 text-white font-light shadow-md"
     >
